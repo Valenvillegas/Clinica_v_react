@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.register-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    /* Similar to WhatsApp Web background */
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+.register-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-title {
+    color: #111b21;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3b4a54;
+}
+
+.input-group input {
+    padding: 12px 14px;
+    border: 1px solid #d1d7db;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #111b21;
+    background-color: #f0f2f5;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #00a884;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 168, 132, 0.15);
+}
+
+.input-group input::placeholder {
+    color: #8a96a0;
+}
+
+.btn-primary {
+    background-color: #00a884;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary:hover {
+    background-color: #008f6f;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.register-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e9edef;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    color: #00a884;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 168, 132, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 30px 20px;
+    }
+}
