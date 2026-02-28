@@ -7,7 +7,7 @@ export default function LoginForm() {
     <section className="login-screen">
             <div className="login-container">
                 <h2 className="login-title">Iniciar Sesión</h2>
-                <form action="" method="post" className="login-form">
+                <form action="" method="post" className="login-form" autoComplete='off'>
                     <div className="input-group">
                         <label htmlFor="usuario">Email</label>
                         <input type="email" name="usuario" id="usuario" placeholder="example@email.com" />

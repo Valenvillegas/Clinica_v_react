@@ -27,14 +27,22 @@ export default function CrearUsuarioForm() {
     <section className="register-screen">
             <div className="register-container">
                 <h2 className="register-title">Crear Cuenta</h2>
-                <form onSubmit={handleSubmit} className="register-form">
+                <form onSubmit={handleSubmit} className="register-form" autoComplete='off'>
                     <div className="input-group">
-                        <label htmlFor="nombre">Nombre Completo</label>
+                        <label htmlFor="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" value={formData.nombre} onChange={handleChange} required />
+                    </div>
+                    <div className='input-group'>
+                        <label htmlFor="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="nombre" placeholder="Tu apellido" value={formData.apellido} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="example@email.com" value={formData.email} onChange={handleChange} required />
+                    </div>
+                     <div className="input-group">
+                        <label htmlFor="numero">Numero</label>
+                        <input type="numero" name="numero" id="numero" placeholder="Tu Numero" value={formData.numero} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Contraseña</label>
