@@ -23,41 +23,46 @@ export default function CrearUsuarioForm() {
         e.preventDefault()
         console.log(formData)
     }
-  return (
-    <section className="register-screen">
+    return (
+        <section className="register-screen">
             <div className="register-container">
-                <h2 className="register-title">Crear Cuenta</h2>
+                <div className="register-header">
+                    <h2 className="register-title">Crear Cuenta</h2>
+                    <p className="register-subtitle">Completa los datos para el nuevo usuario</p>
+                </div>
+
                 <form onSubmit={handleSubmit} className="register-form" autoComplete='off'>
                     <div className="input-group">
                         <label htmlFor="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" value={formData.nombre} onChange={handleChange} required />
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" value={formData.nombre} onChange={handleChange} required />
                     </div>
                     <div className='input-group'>
                         <label htmlFor="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="nombre" placeholder="Tu apellido" value={formData.apellido} onChange={handleChange} required />
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido" value={formData.apellido} onChange={handleChange} required />
                     </div>
-                    <div className="input-group">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="example@email.com" value={formData.email} onChange={handleChange} required />
+                    <div className="input-group full-width">
+                        <label htmlFor="email">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="ejemplo@correo.com" value={formData.email} onChange={handleChange} required />
                     </div>
-                     <div className="input-group">
-                        <label htmlFor="numero">Numero</label>
-                        <input type="numero" name="numero" id="numero" placeholder="Tu Numero" value={formData.numero} onChange={handleChange} required />
+                    <div className="input-group full-width">
+                        <label htmlFor="numero">Número de Teléfono</label>
+                        <input type="tel" name="numero" id="numero" placeholder="+1 234 567 890" value={formData.numero} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="Tu contraseña" value={formData.password} onChange={handleChange} required />
+                        <input type="password" name="password" id="password" placeholder="••••••••" value={formData.password} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="confirmPassword">Confirmar Contraseña</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirma tu contraseña" value={formData.confirmPassword} onChange={handleChange} required />
+                        <label htmlFor="confirmPassword">Confirmar</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="••••••••" value={formData.confirmPassword} onChange={handleChange} required />
                     </div>
-                    <button type="submit" className="btn-primary">Registrarse</button>
+                    <button type="submit" className="btn-primary">Registrar Usuario</button>
                 </form>
-                <div className="register-options">
-                    <Link to="/" className="btn-secondary">Ya tengo una cuenta</Link>
+
+                <div className="register-footer">
+                    <Link to="/" className="btn-secondary">¿Ya tienes una cuenta? Inicia sesión</Link>
                 </div>
             </div>
         </section>
-  )
+    )
 }

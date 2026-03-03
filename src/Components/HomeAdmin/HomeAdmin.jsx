@@ -1,25 +1,32 @@
 import React from 'react'
 import './HomeAdmin.css'
+import { Link } from 'react-router-dom'
 
 export default function HomeAdmin() {
     return (
-        <section>
-            <div class="container">
-                <div class="card">
-                    <h2>Crear Historia Clínica</h2>
-                    <p>Registra una nueva historia clínica para un paciente.</p>
-                    <button onclick="window.location.href='../assets/formulario.php'">Crear</button>
-                    <script src=""></script>
+        <section className="home-admin">
+            <header className="home-header">
+                <h1 className="home-title">Panel de Administración</h1>
+                <p className="home-subtitle">Bienvenido al sistema de gestión clínica</p>
+            </header>
+
+            <div className="container">
+                <div className="card fade-in">
+                    <h2>Nueva Historia Clínica</h2>
+                    <p>Registra de forma segura todos los datos clínicos de un nuevo paciente en el sistema.</p>
+                    <Link to="/crear" className="btn btn-primary-action">Comenzar Registro</Link>
                 </div>
-                <div class="card">
-                    <h2>Acceder a Historias Clínicas</h2>
-                    <p>Consulta y gestiona historias clínicas existentes.</p>
-                    <button onclick="window.location.href='../acceder/acceder.html'">Acceder</button>
+
+                <div className="card fade-in" style={{ animationDelay: '0.1s' }}>
+                    <h2>Historias Existentes</h2>
+                    <p>Busca, consulta y gestiona el historial médico completo de tus pacientes registrados.</p>
+                    <Link to="/home" className="btn btn-primary-action">Ver Expedientes</Link>
                 </div>
-                <div class="card">
-                    <h2>Gestionar Usuarios</h2>
-                    <p>Gestión de usuarios y contraseñas.</p>
-                    <button onclick="window.location.href='../Gestion_de_usuarios/admin_users.php'">Acceder</button>
+
+                <div className="card fade-in" style={{ animationDelay: '0.2s' }}>
+                    <h2>Gestión de Usuarios</h2>
+                    <p>Administra las cuentas de acceso, permisos y seguridad de los profesionales del centro.</p>
+                    <Link to="/home" className="btn btn-primary-action">Configurar Cuentas</Link>
                 </div>
             </div>
         </section>

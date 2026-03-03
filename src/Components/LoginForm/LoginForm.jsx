@@ -3,26 +3,35 @@ import { Link } from 'react-router-dom'
 import './LoginForm.css'
 
 export default function LoginForm() {
-  return (
-    <section className="login-screen">
+    return (
+        <section className="login-screen">
             <div className="login-container">
-                <h2 className="login-title">Iniciar Sesión</h2>
+                <div className="login-header">
+                    <h2 className="login-title">Bienvenido</h2>
+                    <p className="login-subtitle">Ingresa a tu cuenta para continuar</p>
+                </div>
+
                 <form action="" method="post" className="login-form" autoComplete='off'>
                     <div className="input-group">
-                        <label htmlFor="usuario">Email</label>
-                        <input type="email" name="usuario" id="usuario" placeholder="example@email.com" />
+                        <label htmlFor="usuario">Correo Electrónico</label>
+                        <input type="email" name="usuario" id="usuario" placeholder="ejemplo@correo.com" required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Tu contraseña" />
+                        <label htmlFor="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" required />
                     </div>
-                    <Link to="/home" style={{ textAlign: 'center' }}><button type="submit" className="btn-primary">Iniciar Sesión</button></Link>
+                    <Link to="/home"><button type="submit" className="btn-primary" style={{ width: '100%' }}>Iniciar Sesión</button></Link>
                 </form>
-                <div className="login-options">
-                    <Link to="/register" className="btn-secondary" style={{ textDecoration: 'none' }}>Registrarse</Link>
-                    <button type="button" className="btn-secondary">Recuperar Contraseña</button>
+
+                <div className="login-footer">
+                    <div className="login-options">
+                        <button type="button" className="btn-link">¿Olvidaste tu contraseña?</button>
+                    </div>
+                    <p className="register-prompt">
+                        ¿No tienes cuenta? <Link to="/register">Regístrate aquí</Link>
+                    </p>
                 </div>
             </div>
         </section>
-  )
+    )
 }
